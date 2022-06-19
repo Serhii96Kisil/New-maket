@@ -26,7 +26,7 @@ body {
 }
 
 .container {
-  max-width: 1320px;
+  max-width: 1360px;
   padding: 0 20px;
   margin: 0 auto;
 }
@@ -41,24 +41,26 @@ body {
   line-height: 20px;
 }
 #header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   background-color: #fff;
   padding: 23px 50px 23px 50px;
   border-bottom: 1px solid #ccc;
 }
-
-.logo-wrapp {
+.navigation {
+  width: 100%;
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
-
 .header-menu {
   display: flex;
+  align-items: center;
   list-style: none;
-  padding: 0 0 0 50px;
+  padding: 0;
   margin: 0;
+}
+.logo {
+  margin-right: 51px;
+  display: block;
 }
 .list-item1,
 .list-item2 {
@@ -153,7 +155,7 @@ h1 {
   margin: 0 0 27px 0;
   min-width: 552px;
 }
-.main-heading p {
+.main-content {
   max-width: 470px;
   font-size: 25px;
   line-height: 35px;
@@ -179,15 +181,13 @@ h1 {
   max-width: 720px;
   margin-left: 416px;
   margin-bottom: 70px;
+  text-align: center;
 }
 
 h2 {
-  margin: auto;
   font-weight: 600;
   font-size: 50px;
   line-height: 60px;
-  text-align: center;
-  margin-bottom: 80px;
 }
 
 .brands {
@@ -221,7 +221,7 @@ h2 {
   text-align: left;
   margin: -20px 0 43px 0;
 }
-.cards-text p {
+.cards-text-content {
   max-width: 500px;
   font-size: 20px;
   line-height: 30px;
@@ -248,40 +248,46 @@ h2 {
 
 .lokalise {
   background: #fff8e4;
-  padding: 120px 117px 75px 126px;
+  padding: 120px 0 0 0;
 }
-.lokalise a {
-  color: #000;
+.lokalise h2 {
+  text-align: center;
+  margin-bottom: 80px;
 }
 .lokalise a:hover {
   text-decoration: none;
   color: #ff6336;
   transition: all 0.4s;
 }
-.lokalise-box-wrapp {
+.lokalise__box-wrapp {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: start;
 }
-.lokalise-box {
+.lokalise__box {
   width: 33%;
   text-align: center;
   margin-bottom: 75px;
 }
-.lokalise-box p {
+.lokalise__heading {
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 35px;
+  margin: 23px 0;
+}
+.lokalise__content {
   font-size: 18px;
   line-height: 25px;
   max-width: 330px;
   margin: 0 auto;
 }
+.lokalise__content a {
+  color: #000;
+}
+
 .sub-lokalise {
   background: #fff;
   padding: 154px 0 187px 0;
-}
-.sub-lokalise-wrapp {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
 }
 .sub-lokalise a {
   color: #000;
@@ -289,6 +295,41 @@ h2 {
 .sub-lokalise a:hover {
   color: #ff6336;
   transition: all 0.4s;
+  text-decoration: none;
+}
+.sub-lokalise h2 {
+  margin-top: 0;
+  margin-bottom: 75px;
+}
+.sub-lokalise__heading {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 40px;
+  margin-bottom: 34px;
+}
+.sub-lokalise__content {
+  max-width: 409px;
+}
+.sub-lokalise__wrapp {
+  display: flex;
+  justify-content: space-between;
+}
+.sub-lokalise__box:first-child .sub-lokalise__heading {
+  margin-top: 49px;
+}
+
+.sub-lokalise__box:nth-child(2) {
+  margin-top: 17px;
+}
+.sub-lokalise__box:nth-child(2) .sub-lokalise__heading {
+  margin-top: 67px;
+}
+
+.sub-lokalise__box:last-child {
+  margin-top: 9px;
+}
+.sub-lokalise__box:last-child .sub-lokalise__heading {
+  margin-top: 58px;
 }
 .chief-info {
   background: #c9e8f2;
@@ -296,10 +337,19 @@ h2 {
 }
 .chief-info-wrapp {
   display: flex;
+  justify-content: space-between;
+}
+.chief-info-content {
+  max-width: 920px;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 40px;
 }
 .span-chief {
   display: block;
   padding-bottom: 10px;
+  font-size: 15px;
+  line-height: 25px;
 }
 .managment {
   display: flex;
@@ -307,34 +357,26 @@ h2 {
   background: #dabc98;
   padding: 90px 75px 88px 54px;
 }
-.managment-wrapp {
-  align-items: center;
+.managment__cake-section {
   display: flex;
-}
-.managment-wrapp_2 {
   align-items: center;
-  display: flex;
+  min-width: 828px;
+  border-right: 1px solid #000;
 }
-.managment-wrapp a:first-child {
-  padding-right: 60px;
+.managment__img {
+  margin-right: 67px;
 }
-.managment-wrapp_2 a:first-child {
-  padding-right: 50px;
-}
-.managment-wrapp h3 {
-  position: relative;
+.managment__content {
   max-width: 461px;
+  font-weight: 600;
   font-size: 35px;
   line-height: 50px;
 }
-.managment-wrapp h3:after {
-  position: absolute;
-  content: "";
-  width: 1px;
-  height: 168px;
-  background-color: #000;
-  left: 590px;
-  top: -35px;
+.managment__brands-section {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 .integrate-lokalise {
   display: flex;
@@ -349,7 +391,7 @@ h2 {
   line-height: 75px;
   margin-bottom: 0;
 }
-.integrate-lokalise p {
+.integrate-lokalise-content {
   max-width: 590px;
   margin: 0 0 25px 0;
 }
@@ -409,25 +451,25 @@ h2 {
 .footer-span {
   font-weight: 600;
 }
-.footer-list-wrapp {
+.footer-navigation {
   display: flex;
   align-content: flex-end;
 }
-.footer-list-wrapp ul {
+.footer-navigation ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-.footer-list-wrapp li {
+.footer-navigation li {
   padding-left: 50px;
 }
-.footer-list-wrapp ul li:first-child {
+.footer-navigation ul li:first-child {
   font-weight: 600;
   font-size: 20px;
   line-height: 20px;
   padding-bottom: 20px;
 }
-.footer-list-wrapp ul li a {
+.footer-navigation ul li a {
   color: #000;
   text-decoration: none;
   font-size: 15px;
